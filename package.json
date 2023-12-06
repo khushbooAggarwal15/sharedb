@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@teamwork/websocket-json-stream": "^2.0.0",
+    "rich-text": "^4.1.0",
+    "sharedb": "^4.1.2"
+  }
+}
