@@ -1,6 +1,5 @@
 import ReactQuill, { Quill } from "react-quill";
 
-import { ImageDrop } from "quill-image-drop-module";
 import MagicUrl from "quill-magic-url";
 import BlotFormatter from "quill-blot-formatter";
 
@@ -10,7 +9,6 @@ import "react-quill/dist/quill.snow.css";
 import { useEffect, useState } from "react";
 
 const Editor = () => {
-  Quill.register("modules/imageDrop", ImageDrop);
   Quill.register("modules/magicUrl", MagicUrl);
   Quill.register("modules/blotFormatter", BlotFormatter);
 
@@ -18,7 +16,6 @@ const Editor = () => {
   const connection = Connection.get("examples", "richtext");
 
   const modules = {
-    imageDrop: true,
     magicUrl: true,
     blotFormatter: {},
     toolbar: [
@@ -35,6 +32,7 @@ const Editor = () => {
   };
 
   const handleChange = (delta: any, oldDelta: any, source: any) => {
+    console.log(oldDelta);
     if (source !== "user") {
       return;
     }
@@ -60,7 +58,11 @@ const Editor = () => {
 
   return (
     <div>
-      <ReactQuill value={data} onChange={handleChange} modules={modules} />
+      <ReactQuill
+        value={data as any}
+        onChange={handleChange}
+        modules={modules}
+      />
     </div>
   );
 };
