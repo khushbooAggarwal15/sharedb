@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "builds": [{ "src": "*.cjs", "use": "@now/node-server" }],
+  "builds": [{ "src": "*.cjs", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "backend-sharedb.cjs" }]
 }
