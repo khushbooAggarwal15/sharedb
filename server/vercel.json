@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "builds": [{ "src": "*.cjs", "use": "@now/node-server" }],
+  "routes": [{ "src": "/(.*)", "dest": "backend-sharedb.cjs" }]
+}
