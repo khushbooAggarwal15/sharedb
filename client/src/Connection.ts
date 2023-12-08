@@ -5,7 +5,7 @@ import * as richText from "rich-text";
 sharedb.types.register(richText.type);
 
 var socket = new ReconnectingWebSocket(
-  "https://sharedb-backend.vercel.app/"
+  "ws://sharedb-backend.vercel.app:3001"
 ) as any;
 
 var connection = new sharedb.Connection(socket);
