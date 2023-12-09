@@ -28,6 +28,11 @@ function startServer() {
   var app = express();
   app.use(express.static("static"));
   app.use(express.static("node_modules/quill/dist"));
+
+  app.get("/", function (req, res) {
+    res.send("Hello, this is your WebSocket server!");
+  });
+
   var server = http.createServer(app);
 
   var wss = new WebSocket.Server({ server: server });
