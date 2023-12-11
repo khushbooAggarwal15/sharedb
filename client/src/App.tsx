@@ -1,7 +1,7 @@
 import ReactQuill, { Quill } from "react-quill";
 
-import MagicUrl from "quill-magic-url";
-import BlotFormatter from "quill-blot-formatter";
+// import MagicUrl from "quill-magic-url";
+// import BlotFormatter from "quill-blot-formatter";
 
 import Connection from "./Connection";
 
@@ -9,15 +9,15 @@ import "react-quill/dist/quill.snow.css";
 import { useEffect, useState } from "react";
 
 const Editor = () => {
-  Quill.register("modules/magicUrl", MagicUrl);
-  Quill.register("modules/blotFormatter", BlotFormatter);
+  // Quill.register("modules/magicUrl", MagicUrl);
+  // Quill.register("modules/blotFormatter", BlotFormatter);
 
   const [data, setDelta] = useState({});
   const connection = Connection.get("examples", "richtext");
 
   const modules = {
-    magicUrl: true,
-    blotFormatter: {},
+    // magicUrl: true,
+    // blotFormatter: {},
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
       ["bold", "italic", "underline", "strike"],
