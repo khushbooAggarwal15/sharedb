@@ -18,12 +18,12 @@
     "quill-delta-to-html": "^0.12.1",
     "quill-image-drop-module": "^1.0.3",
     "quill-magic-url": "^4.2.0",
-    "react": "^0.13.2",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-quill": "^2.0.0",
     "reconnecting-websocket": "^4.4.0",
     "rich-text": "^4.1.0",
-    "sharedb": "^4.1.1",
+    "sharedb": "^4.1.2",
     "websocket": "^1.0.34"
   },
   "devDependencies": {
